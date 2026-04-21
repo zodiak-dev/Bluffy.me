@@ -1,0 +1,244 @@
+/* ═══════════════════════════════════════════
+   LANDING PAGE
+   ═══════════════════════════════════════════ */
+
+.landing-page {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.landing-content {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.landing-header {
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem 0;
+  min-height: 48px;
+}
+
+.user-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem 0.4rem 0.4rem;
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.9rem;
+}
+
+.user-badge:hover {
+  border-color: var(--danger);
+}
+
+.user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.8rem;
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2rem 0;
+  animation: fadeIn 0.6s ease;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.logo {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2), var(--accent-3));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  letter-spacing: -1px;
+}
+
+.logo-sm {
+  font-size: 2rem;
+}
+
+.logo-icon {
+  -webkit-text-fill-color: initial;
+  font-size: 0.9em;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  font-weight: 300;
+}
+
+.hero-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+  max-width: 320px;
+}
+
+/* Join form */
+.join-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  animation: scaleIn 0.2s ease;
+}
+
+.pin-input-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pin-input {
+  flex: 1;
+  padding: 0.85rem 1rem;
+  background: var(--bg-glass-light);
+  border: 2px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.5em;
+  outline: none;
+  font-family: var(--font-heading);
+}
+
+.pin-input:focus {
+  border-color: var(--accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.pin-input::placeholder {
+  letter-spacing: 0.15em;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+/* Features */
+.features {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  padding: 1rem 0 2rem;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+
+.feature-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s;
+}
+
+.feature-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.feature-icon {
+  font-size: 1.8rem;
+}
+
+.feature-card h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.feature-card p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.landing-footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (min-width: 640px) {
+  .features {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .feature-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem 1rem;
+  }
+
+  .logo {
+    font-size: 4.5rem;
+  }
+
+  .tagline {
+    font-size: 1.3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .landing-content {
+    max-width: 800px;
+  }
+
+  .hero {
+    padding: 3rem 0;
+  }
+
+  .hero-actions {
+    max-width: 360px;
+  }
+
+  .logo {
+    font-size: 5.5rem;
+  }
+}

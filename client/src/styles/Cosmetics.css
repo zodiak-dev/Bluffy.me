@@ -1,0 +1,296 @@
+/* ═══════════════════════════════════════════
+   TABLE THEMES (cosmetics)
+   ═══════════════════════════════════════════ */
+
+/* — bronze — */
+.poker-table.theme-bronze .table-felt {
+  background: radial-gradient(ellipse at center, #a0601a 0%, #7c4b1c 50%, #3d2009 100%);
+  border-color: #cd7f32;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 0 8px #8a5a22,
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(205, 127, 50, 0.25);
+}
+
+/* — silver — */
+.poker-table.theme-silver .table-felt {
+  background: radial-gradient(ellipse at center, #4a5568 0%, #2a3a4a 50%, #1a2535 100%);
+  border-color: #a8b8c8;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 0 8px #7a8a9a,
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(168, 184, 200, 0.2);
+}
+
+/* — gold — */
+.poker-table.theme-gold .table-felt {
+  background: radial-gradient(ellipse at center, #7c5c10 0%, #4a3200 50%, #1e1400 100%);
+  border-color: #fbbf24;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 0 8px #b48512,
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(251, 191, 36, 0.35);
+}
+
+/* — diamond — */
+.poker-table.theme-diamond .table-felt {
+  background: radial-gradient(ellipse at center, #164e63 0%, #0a2040 50%, #030f20 100%);
+  border-color: #67e8f9;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 0 8px #22a8bc,
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(103, 232, 249, 0.3);
+}
+
+/* — legend — */
+.poker-table.theme-legend .table-felt {
+  background: radial-gradient(ellipse at center, #4a1d6e 0%, #1a0030 50%, #080015 100%);
+  border-color: #a855f7;
+  box-shadow:
+    inset 0 0 40px rgba(0, 0, 0, 0.5),
+    0 0 0 8px #732eb8,
+    0 0 0 10px rgba(255, 255, 255, 0.05),
+    0 0 30px rgba(168, 85, 247, 0.4);
+}
+
+/* ═══════════════════════════════════════════
+   COSMETICS PAGE
+   ═══════════════════════════════════════════ */
+
+.cosmetics-page {
+  min-height: 100dvh;
+  background: var(--bg-primary);
+  padding-bottom: calc(2rem + var(--safe-bottom));
+  animation: fadeIn 0.4s ease;
+}
+
+.cosmetics-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  padding-top: calc(1rem + var(--safe-top));
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-glass);
+  backdrop-filter: blur(20px);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.cosmetics-title {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.cosmetics-subtitle {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin-top: 0.15rem;
+}
+
+.wins-count {
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.25rem;
+  padding: 1.5rem 1.25rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.theme-card {
+  background: var(--bg-glass);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.theme-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.theme-card.theme-active {
+  border-color: var(--theme-accent, var(--accent));
+  box-shadow: 0 0 0 2px var(--theme-accent, var(--accent)), 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.theme-card.theme-locked {
+  opacity: 0.75;
+}
+
+.theme-preview {
+  position: relative;
+  height: 120px;
+  overflow: hidden;
+}
+
+.theme-felt {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.theme-oval {
+  width: 140px;
+  height: 65px;
+  border: 3px solid var(--theme-accent, #22c55e);
+  border-radius: 50%;
+  opacity: 0.6;
+}
+
+.theme-cards {
+  display: flex;
+  gap: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mini-card {
+  width: 18px;
+  height: 26px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid var(--theme-accent, #22c55e);
+  border-radius: 3px;
+}
+
+.theme-lock-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  backdrop-filter: blur(2px);
+}
+
+.lock-icon {
+  font-size: 1.5rem;
+}
+
+.lock-text {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.theme-info {
+  padding: 1rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.theme-name-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.theme-icon {
+  font-size: 1.2rem;
+}
+
+.theme-name {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  flex: 1;
+}
+
+.theme-badge-active {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.2rem 0.55rem;
+  background: var(--theme-accent, var(--accent));
+  color: #000;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.04em;
+}
+
+.theme-desc {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.btn-sm {
+  padding: 0.55rem 1rem;
+  font-size: 0.85rem;
+  border-radius: var(--radius-md);
+}
+
+.theme-progress {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.progress-bar-bg {
+  flex: 1;
+  height: 6px;
+  background: var(--bg-glass-light);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.progress-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.success-toast {
+  position: fixed;
+  bottom: calc(20px + var(--safe-bottom));
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--success);
+  color: #000;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-full);
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 1000;
+  animation: fadeInUp 0.3s ease;
+  box-shadow: 0 4px 20px rgba(0, 255, 136, 0.35);
+}
+
+@media (max-width: 480px) {
+  .themes-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+}
