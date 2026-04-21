@@ -21,12 +21,12 @@
 ## 📸 Visual Previews
 
 <p align="center">
-[Screen1](https://imgur.com/wQtC6e5) 
+  <img src="https://i.imgur.com/wQtC6e5.png" width="800" alt="Screen 1">
 </p>
 
 <p align="center">
-  <img src="docs/images/chips1.png" width="200" alt="Chips">
-  <img src="docs/images/cards1.png" width="200" alt="Cards">
+  <img src="https://i.imgur.com/w5wqpYP.png" width="400" alt="Screen 2">
+  <img src="https://i.imgur.com/wQtC6e5.png" width="400" alt="Screen 3">
 </p>
 
 ---
