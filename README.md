@@ -26,7 +26,7 @@
 
 <p align="center">
   <img src="https://i.imgur.com/w5wqpYP.png" width="400" alt="Screen 2">
-  <img src="[https://i.imgur.com/wQtC6e5.png](https://i.imgur.com/CQTejJq.png)" width="400" alt="Screen 3">
+  <img src="https://i.imgur.com/CQTejJq.png" width="400" alt="Screen 3">
 </p>
 
 ---
