@@ -21,9 +21,7 @@
 ## 📸 Visual Previews
 
 <p align="center">
-  <img src="docs/images/poker_table.png" width="400" alt="Poker Table View">
-  <br>
-  <em>Premium 3D-rendered poker table and immersive interface.</em>
+[Screen1](https://imgur.com/wQtC6e5) 
 </p>
 
 <p align="center">
